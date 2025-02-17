@@ -17,8 +17,8 @@ module.exports = {
       "2xl": "1536px",
     },
     colors: ({ colors }) => ({
-      white: '#FFFFFF',
-      black: '#000000',
+      white: "#FFFFFF",
+      black: "#000000",
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
@@ -36,17 +36,18 @@ module.exports = {
         900: "#101828",
       },
       primary: {
-        50: '#EEB8BC',
-        100: '#EAA8AD',
-        200: '#E2878E',
-        300: '#DB666E',
-        400: '#D3454F',
-        500: '#C12E39',
-        600: '#A0262F',
-        700: '#731B22',
-        800: '#451014',
-        900: '#180607',
-        950: '#010000'
+        DEFAULT: "#8A40DB",
+        50: "#FEFDFF",
+        100: "#F3ECFB",
+        200: "#DEC9F5",
+        300: "#C9A7EE",
+        400: "#B485E8",
+        500: "#9F62E1",
+        600: "#8A40DB",
+        700: "#6E24BF",
+        800: "#531B90",
+        900: "#381261",
+        950: "#2A0E49",
       },
       error: {
         25: "#FFFBFA",
@@ -401,8 +402,7 @@ module.exports = {
       },
       // Tailwinds built in colors
       red: colors.red,
-      slate: colors.slate
-
+      slate: colors.slate,
     }),
     columns: {
       auto: "auto",
@@ -475,7 +475,7 @@ module.exports = {
       ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
       pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       bounce: "bounce 1s infinite",
-      fade: "fade .5s ease-in-out"
+      fade: "fade .5s ease-in-out",
     },
     aspectRatio: {
       auto: "auto",
@@ -754,9 +754,7 @@ module.exports = {
         '"Courier New"',
         "monospace",
       ],
-      "plus-jakarta-sans": [
-        "Plus Jakarta Sans"
-      ]
+      "plus-jakarta-sans": ["Plus Jakarta Sans"],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1.125rem" }],
@@ -765,17 +763,17 @@ module.exports = {
       base: ["1rem", { lineHeight: "1.5rem" }],
       lg: ["1.125rem", { lineHeight: "1.75rem" }],
       xl: ["1.25rem", { lineHeight: "1.875rem" }],
-      '2xl': ['1.5rem', { lineHeight: '2rem' }],
-      '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-      '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-      '5xl': ['3rem', { lineHeight: '1' }],
-      '6xl': ['3.75rem', { lineHeight: '1' }],
-      "displayxs": ["1.5rem", { lineHeight: "2rem" }],
-      "displaysm": ["1.875rem", { lineHeight: "2.375rem" }],
-      "displaymd": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-.2px" }],
-      "displaylg": ["3rem", { lineHeight: "3.75rem" }],
-      "displayxl": ["3.75rem", { lineHeight: "4.5rem" }],
-      "display2xl": ["4.5rem", { lineHeight: "5.625rem" }],
+      "2xl": ["1.5rem", { lineHeight: "2rem" }],
+      "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+      "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
+      "5xl": ["3rem", { lineHeight: "1" }],
+      "6xl": ["3.75rem", { lineHeight: "1" }],
+      displayxs: ["1.5rem", { lineHeight: "2rem" }],
+      displaysm: ["1.875rem", { lineHeight: "2.375rem" }],
+      displaymd: ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-.2px" }],
+      displaylg: ["3rem", { lineHeight: "3.75rem" }],
+      displayxl: ["3.75rem", { lineHeight: "4.5rem" }],
+      display2xl: ["4.5rem", { lineHeight: "5.625rem" }],
       "7xl": ["4.5rem", { lineHeight: "5.625rem" }],
       "8xl": ["6rem", { lineHeight: "1" }],
       "9xl": ["8rem", { lineHeight: "1" }],
@@ -945,7 +943,7 @@ module.exports = {
       containermd: "48rem",
       containerlg: "64rem",
       containerxl: "80rem",
-      "container2xl": "90rem",
+      container2xl: "90rem",
     }),
     inset: ({ theme }) => ({
       auto: "auto",
@@ -986,12 +984,12 @@ module.exports = {
         },
       },
       fade: {
-        "from": {
-          opacity: 0
+        from: {
+          opacity: 0,
         },
-        "to": {
-          opacity: 1
-        }
+        to: {
+          opacity: 1,
+        },
       },
     },
     letterSpacing: {
@@ -1053,7 +1051,7 @@ module.exports = {
       containermd: "48rem",
       containerlg: "64rem",
       containerxl: "80rem",
-      "container2xl": "90rem",
+      container2xl: "90rem",
       full: "100%",
       min: "min-content",
       max: "max-content",
@@ -1350,7 +1348,7 @@ module.exports = {
       containermd: "48rem",
       containerlg: "64rem",
       containerxl: "80rem",
-      "container2xl": "90rem",
+      container2xl: "90rem",
     }),
     willChange: {
       auto: "auto",
@@ -1386,7 +1384,5 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
+  plugins: [require("@tailwindcss/forms")],
 };

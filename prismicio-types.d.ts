@@ -4,7 +4,112 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomePageDocumentDataSlicesSlice = HeroSectionSlice | SimpleTextSlice;
+/**
+ * Item in *Footer Menu → Menu Item*
+ */
+export interface FooterMenuDocumentDataMenuItemItem {
+  /**
+   * Title field in *Footer Menu → Menu Item*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_menu.menu_item[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * URL field in *Footer Menu → Menu Item*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_menu.menu_item[].url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Content for Footer Menu documents
+ */
+interface FooterMenuDocumentData {
+  /**
+   * Menu Item field in *Footer Menu*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_menu.menu_item[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  menu_item: prismic.GroupField<Simplify<FooterMenuDocumentDataMenuItemItem>>;
+
+  /**
+   * Facebook Link field in *Footer Menu*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_menu.facebook_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  facebook_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Instagram Link field in *Footer Menu*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_menu.instagram_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  instagram_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Copyright field in *Footer Menu*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_menu.copyright
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  copyright: prismic.KeyTextField;
+}
+
+/**
+ * Footer Menu document from Prismic
+ *
+ * - **API ID**: `footer_menu`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterMenuDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterMenuDocumentData>,
+    "footer_menu",
+    Lang
+  >;
+
+type HomePageDocumentDataSlicesSlice =
+  | BeforeAndAfterSlice
+  | HeroSectionSlice
+  | SimpleTextSlice;
 
 /**
  * Content for Home Page documents
@@ -69,7 +174,171 @@ export type HomePageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomePageDocument;
+/**
+ * Item in *Site Navigation → Menu Item*
+ */
+export interface SiteNavigationDocumentDataMenuItemItem {
+  /**
+   * Title field in *Site Navigation → Menu Item*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_navigation.menu_item[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * URL field in *Site Navigation → Menu Item*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_navigation.menu_item[].url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Item in *Site Navigation → CTA Item*
+ */
+export interface SiteNavigationDocumentDataCtaItemItem {
+  /**
+   * Title field in *Site Navigation → CTA Item*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_navigation.cta_item[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * URL field in *Site Navigation → CTA Item*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_navigation.cta_item[].url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Content for Site Navigation documents
+ */
+interface SiteNavigationDocumentData {
+  /**
+   * Menu Item field in *Site Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_navigation.menu_item[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  menu_item: prismic.GroupField<
+    Simplify<SiteNavigationDocumentDataMenuItemItem>
+  >;
+
+  /**
+   * CTA Item field in *Site Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_navigation.cta_item[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  cta_item: prismic.GroupField<Simplify<SiteNavigationDocumentDataCtaItemItem>>;
+
+  /**
+   * Logo field in *Site Navigation*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site_navigation.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+}
+
+/**
+ * Site Navigation document from Prismic
+ *
+ * - **API ID**: `site_navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SiteNavigationDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<SiteNavigationDocumentData>,
+    "site_navigation",
+    Lang
+  >;
+
+export type AllDocumentTypes =
+  | FooterMenuDocument
+  | HomePageDocument
+  | SiteNavigationDocument;
+
+/**
+ * Primary content in *BeforeAndAfter → Default → Primary*
+ */
+export interface BeforeAndAfterSliceDefaultPrimary {
+  /**
+   * Before field in *BeforeAndAfter → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: before_and_after.default.primary.before
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  before: prismic.ImageField<never>;
+
+  /**
+   * After field in *BeforeAndAfter → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: before_and_after.default.primary.after
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  after: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for BeforeAndAfter Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BeforeAndAfterSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BeforeAndAfterSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *BeforeAndAfter*
+ */
+type BeforeAndAfterSliceVariation = BeforeAndAfterSliceDefault;
+
+/**
+ * BeforeAndAfter Shared Slice
+ *
+ * - **API ID**: `before_and_after`
+ * - **Description**: BeforeAndAfter
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BeforeAndAfterSlice = prismic.SharedSlice<
+  "before_and_after",
+  BeforeAndAfterSliceVariation
+>;
 
 /**
  * Primary content in *HeroSection → Default → Primary*
@@ -156,6 +425,16 @@ export interface HeroSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Logo field in *HeroSection → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_section.default.primary.logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
 }
 
 /**
@@ -388,10 +667,21 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      FooterMenuDocument,
+      FooterMenuDocumentData,
+      FooterMenuDocumentDataMenuItemItem,
       HomePageDocument,
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
+      SiteNavigationDocument,
+      SiteNavigationDocumentData,
+      SiteNavigationDocumentDataMenuItemItem,
+      SiteNavigationDocumentDataCtaItemItem,
       AllDocumentTypes,
+      BeforeAndAfterSlice,
+      BeforeAndAfterSliceDefaultPrimary,
+      BeforeAndAfterSliceVariation,
+      BeforeAndAfterSliceDefault,
       HeroSectionSlice,
       HeroSectionSliceDefaultPrimary,
       HeroSectionSliceVariation,

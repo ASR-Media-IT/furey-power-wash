@@ -1,11 +1,12 @@
 import { Header, Footer } from '@/components/organisms'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import { createClient } from '@/prismicio'
 import { PrismicPreview } from '@prismicio/next'
 import { repositoryName } from '@/prismicio'
 import './globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ subsets: ['latin']})
 
 export const metadata = {
   title: "Web Dev Kit",
@@ -26,7 +27,7 @@ export default async function RootLayout({ children, params: { lang}}) {
   const header = await client.getSingle('site_navigation', { lang: lang });
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Header header={header} />
         {children}
         <Footer lang={lang} />

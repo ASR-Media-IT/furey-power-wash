@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 
 export const components = {
-  simple_text: dynamic(() => import("./SimpleText")),
+  before_and_after: dynamic(() => import("./BeforeAndAfter")),
   hero_section: dynamic(() => import("./HeroSection")),
+  simple_text: dynamic(() => import("./SimpleText")),
 };

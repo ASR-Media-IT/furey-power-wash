@@ -12,6 +12,7 @@
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
     "@heroicons/react": "^2.0.18",
+    "@img-comparison-slider/react": "^8.0.2",
     "@prismicio/client": "^7.3.1",
     "@prismicio/next": "^1.5.0",
     "@prismicio/react": "^2.7.3",
