@@ -755,6 +755,7 @@ module.exports = {
         "monospace",
       ],
       "plus-jakarta-sans": ["Plus Jakarta Sans"],
+      custom: ['ConthraxSemiBold', 'sans-serif'],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1.125rem" }],

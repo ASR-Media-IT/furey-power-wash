@@ -25,7 +25,7 @@ const HeroSection = ({ slice }) => {
           {/* <h1 className="max-w-xs text-center lg:text-left md:max-w-2xl">
           {slice.primary.heading}
         </h1> */}
-          <p className="max-w-xl px-4 md:px-0 mb-10 text-center text-grayTrue-100 lg:text-left">
+          <p className="max-w-xl px-4 font-custom md:px-0 mb-10 text-center text-grayTrue-100 lg:text-left">
             {slice.primary.body}
           </p>
           <div className="z-0 flex flex-col md:flex-row items-center justify-center gap-5 lg:justify-start">

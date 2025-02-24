@@ -10,7 +10,7 @@ export default async function Footer({lang}) {
         <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
           {footer.data.menu_item.map((item) => (
             <div key={item.title} className="pb-6">
-              <PrismicNextLink field={item.url} className="text-sm text-gray-600 duration-300 hover:text-primary-600 font-heading">
+              <PrismicNextLink field={item.url} className="text-xs font-custom text-gray-600 duration-300 hover:text-primary-600 font-heading">
                 {item.title}
               </PrismicNextLink>
             </div>

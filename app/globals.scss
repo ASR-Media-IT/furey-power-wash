@@ -2,17 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ConthraxSemiBold';
+  src: url('/fonts/Conthrax-SemiBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   scroll-behavior: smooth;
 }
 
 @layer base {
   h1 {
-    @apply text-4xl mb-3 lg:text-5xl font-bold text-grayTrue-800 tracking-wide;
+    @apply text-4xl mb-3 lg:text-5xl font-bold text-grayTrue-800 tracking-wide font-custom;
   }
 
   h2 {
-    @apply text-3xl mb-3 lg:text-4xl font-bold text-grayTrue-800;
+    @apply text-3xl mb-3 lg:text-4xl font-bold text-grayTrue-800 font-custom;
   }
 
   h3 {
@@ -26,18 +33,18 @@
 
 @layer components {
   .btn-primary {
-    @apply block capitalize relative overflow-hidden hover:text-white shadow-sm cursor-pointer w-fit duration-300 hover:bg-primary-500 hover:scale-105 hover:shadow-xl ease-in-out py-3 px-3.5 text-center text-sm bg-primary-600 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-white;
+    @apply block capitalize relative overflow-hidden hover:text-white shadow-sm cursor-pointer w-fit duration-300 hover:bg-primary-500 hover:scale-105 hover:shadow-xl ease-in-out py-3 px-3.5 text-center text-xs bg-primary-600 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-white font-custom;
   }
   // .btn-secondary {
   //   @apply block capitalize relative overflow-hidden hover:text-secondary-500 shadow-sm cursor-pointer w-fit duration-300 hover:scale-105 hover:shadow-xl ease-in-out py-3 px-3.5 text-center text-sm border font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-secondary-600 hover:border-secondary-500 border-secondary-600;
   // }
 
   .btn-primary-white {
-    @apply block capitalize hover:scale-105 hover:shadow-xl relative overflow-hidden shadow-sm cursor-pointer w-fit duration-300 ease-in-out py-2.5 px-3.5 text-center text-sm border border-white font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-white;
+    @apply block capitalize hover:scale-105 hover:shadow-xl relative overflow-hidden shadow-sm cursor-pointer w-fit duration-300 ease-in-out py-2.5 px-3.5 text-center text-xs border border-white font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-white font-custom;
   }
 
   .btn-link {
-    @apply relative inline-block text-sm text-gray-900 font-semibold duration-300;
+    @apply relative inline-block text-xs text-gray-900 font-semibold duration-300 font-custom;
   }
 
   .btn-link:hover:before {
@@ -50,7 +57,7 @@
   }
 
   .btn-link-white {
-    @apply relative inline-block text-sm text-white font-semibold duration-300;
+    @apply relative inline-block text-xs text-white font-semibold duration-300 font-custom;
   }
 
   .btn-link-white:hover:before {
