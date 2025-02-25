@@ -4,6 +4,13 @@ import dynamic from "next/dynamic";
 
 export const components = {
   before_and_after: dynamic(() => import("./BeforeAndAfter")),
+  call_to_action_with_image: dynamic(() => import("./CallToActionWithImage")),
+  gallery: dynamic(() => import("./Gallery")),
   hero_section: dynamic(() => import("./HeroSection")),
+  large_call_to_action: dynamic(() => import("./LargeCallToAction")),
+  page_header: dynamic(() => import("./PageHeader")),
+  rich_text: dynamic(() => import("./RichText")),
+  services_section: dynamic(() => import("./ServicesSection")),
   simple_text: dynamic(() => import("./SimpleText")),
+  testimonial_section: dynamic(() => import("./TestimonialSection")),
 };

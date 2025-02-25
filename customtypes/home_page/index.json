@@ -11,6 +11,27 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "services_section": {
+              "type": "SharedSlice"
+            },
+            "page_header": {
+              "type": "SharedSlice"
+            },
+            "gallery": {
+              "type": "SharedSlice"
+            },
+            "rich_text": {
+              "type": "SharedSlice"
+            },
+            "call_to_action_with_image": {
+              "type": "SharedSlice"
+            },
+            "testimonial_section": {
+              "type": "SharedSlice"
+            },
+            "large_call_to_action": {
+              "type": "SharedSlice"
+            },
             "before_and_after": {
               "type": "SharedSlice"
             },
