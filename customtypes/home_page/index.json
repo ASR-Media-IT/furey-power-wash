@@ -14,9 +14,6 @@
             "services_section": {
               "type": "SharedSlice"
             },
-            "page_header": {
-              "type": "SharedSlice"
-            },
             "gallery": {
               "type": "SharedSlice"
             },
@@ -27,9 +24,6 @@
               "type": "SharedSlice"
             },
             "testimonial_section": {
-              "type": "SharedSlice"
-            },
-            "large_call_to_action": {
               "type": "SharedSlice"
             },
             "before_and_after": {

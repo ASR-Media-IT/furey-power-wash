@@ -108,12 +108,10 @@ export type FooterMenuDocument<Lang extends string = string> =
 
 type HomePageDocumentDataSlicesSlice =
   | ServicesSectionSlice
-  | PageHeaderSlice
   | GallerySlice
   | RichTextSlice
   | CallToActionWithImageSlice
   | TestimonialSectionSlice
-  | LargeCallToActionSlice
   | BeforeAndAfterSlice
   | HeroSectionSlice
   | SimpleTextSlice;
