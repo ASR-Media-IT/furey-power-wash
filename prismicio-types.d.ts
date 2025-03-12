@@ -107,6 +107,7 @@ export type FooterMenuDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | RequestFormSlice
   | ServicesSectionSlice
   | GallerySlice
   | RichTextSlice
@@ -856,6 +857,36 @@ export type PageHeaderSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for RequestForm Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RequestFormSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *RequestForm*
+ */
+type RequestFormSliceVariation = RequestFormSliceDefault;
+
+/**
+ * RequestForm Shared Slice
+ *
+ * - **API ID**: `request_form`
+ * - **Description**: RequestForm
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RequestFormSlice = prismic.SharedSlice<
+  "request_form",
+  RequestFormSliceVariation
+>;
+
+/**
  * Primary content in *RichText → Default → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
@@ -1360,6 +1391,9 @@ declare module "@prismicio/client" {
       PageHeaderSliceDefaultPrimary,
       PageHeaderSliceVariation,
       PageHeaderSliceDefault,
+      RequestFormSlice,
+      RequestFormSliceVariation,
+      RequestFormSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceCenteredPrimary,

@@ -32,6 +32,7 @@ const ImageGallery = ({ slice }) => {
   const handleClose = () => setIndex(-1);
   const handleMovePrev = () => setIndex(prevIndex);
   const handleMoveNext = () => setIndex(nextIndex);
+  
   return (
     <Container
       data-slice-type={slice.slice_type}

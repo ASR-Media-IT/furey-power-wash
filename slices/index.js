@@ -9,6 +9,7 @@ export const components = {
   hero_section: dynamic(() => import("./HeroSection")),
   large_call_to_action: dynamic(() => import("./LargeCallToAction")),
   page_header: dynamic(() => import("./PageHeader")),
+  request_form: dynamic(() => import("./RequestForm")),
   rich_text: dynamic(() => import("./RichText")),
   services_section: dynamic(() => import("./ServicesSection")),
   simple_text: dynamic(() => import("./SimpleText")),

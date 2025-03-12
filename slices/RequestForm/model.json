@@ -1,0 +1,16 @@
+{
+  "id": "request_form",
+  "type": "SharedSlice",
+  "name": "RequestForm",
+  "description": "RequestForm",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}
