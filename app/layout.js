@@ -19,7 +19,17 @@ export const metadata = {
     type: "website",
   },
 }
-export default async function RootLayout({ children, params: { lang}}) {
+export default async function RootLayout(props) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
+  const {
+    children
+  } = props;
+
   const client = createClient();
   const header = await client.getSingle('site_navigation', { lang: lang });
   return (
