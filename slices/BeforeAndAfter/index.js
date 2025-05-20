@@ -14,12 +14,12 @@ const BeforeAndAfter = ({ slice }) => {
 
         <ImgComparisonSlider className="w-full">
           <PrismicNextImage
-            className="object-cover w-full h-full max-h-[300px]"
+            className="object-cover w-full h-full max-h-[500px]"
             field={slice.primary.before}
             slot="first"
           />
           <PrismicNextImage
-            className="object-cover w-full h-full max-h-[300px]"
+            className="object-cover w-full h-full max-h-[500px]"
             field={slice.primary.after}
             slot="second"
           />
