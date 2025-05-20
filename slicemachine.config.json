@@ -2,5 +2,6 @@
   "repositoryName": "furey-power-wash",
   "adapter": "@slicemachine/adapter-next",
   "libraries": ["./slices"],
-  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "apiEndpoint": "https://furey-power-wash.cdn.prismic.io/api/v2"
 }
