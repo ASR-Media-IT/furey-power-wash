@@ -14,7 +14,7 @@ const HeroSection = ({ slice }) => {
       <Container
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className={`lg:flex-row flex-col justify-between items-center gap-16 flex relative h-[400px] w-full !p-0`}
+        className={`lg:flex-row flex-col justify-between items-center gap-16 flex relative h-[500px] w-full !p-0`}
       >
         {/* Content */}
         <div className="flex flex-col items-center justify-center w-full h-full px-4">
